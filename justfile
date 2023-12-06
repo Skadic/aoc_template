@@ -1,13 +1,16 @@
 today := `date "+%-d"`
 current_year := `date "+%Y"`
 
+nextest_missing := `cargo --list | grep nextest; echo $?`
+test_bin := if nextest_missing == "1" { "cargo test --release -- --nocapture" } else { "cargo nextest run --nocapture --release"}
+
 # List all targets
 _list:
   just --list --justfile {{justfile()}}
 
 # Run part
 run nr: 
-  cargo test --release part{{nr}} -- --nocapture
+  {{test_bin}} part{{nr}}
 [private]
 alias r:=run
 
