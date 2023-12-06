@@ -1,0 +1,5 @@
+[template]
+ignore = [ 
+  "README.md",
+  "input.txt"
+]
