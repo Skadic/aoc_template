@@ -5,5 +5,5 @@ fn main() {
 
 #[divan::bench]
 fn part1() {
-    aoc_template::part1::process().unwrap();
+    {{project-name}}::part1::process().unwrap();
 }
