@@ -4,7 +4,7 @@ fn main() {
 
 
 #[divan::bench]
-fn part1() {
+fn part2() {
     {{project-name}}::part2::process().unwrap();
 }
 

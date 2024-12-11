@@ -1,5 +1,8 @@
-#[tracing::instrument(name="part2", parent=None)]
+use crate::{SAMPLE, parse_input};
+
+#[tracing::instrument(name = "part2", parent=None)]
 pub fn process() -> miette::Result<()> {
+    let input = parse_input(SAMPLE);
     // Edit here
     todo!("part 2")
 }

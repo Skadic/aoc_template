@@ -1,4 +1,5 @@
 pub const INPUT: &str = include_str!("../input.txt");
+pub const SAMPLE: &str = "";
 
 pub mod part1;
 pub mod part2;
